@@ -75,7 +75,7 @@ public class ConvertToBusinessNumHandler implements PojoRequestHandler<JSONObjec
 
         // 正则匹配找到电话号码
         String numRegex = "\\d{1,}";
-        String rgex = "1\\d{10}|(0\\d{2,3}(-)?)?(\\d{8}|\\d{7})";
+        String rgex = "(0\\d{2,3}(-)?)?(\\d{8}|\\d{7})";
         Pattern numPattern = Pattern.compile(numRegex);// 匹配的模式
         Pattern pattern = Pattern.compile(rgex);// 匹配的模式
         Matcher nums = numPattern.matcher(stringBuilder);
